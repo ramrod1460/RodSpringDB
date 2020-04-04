@@ -1,0 +1,1 @@
+CREATE TABLE person (id UUID NOT NULL primary key, title character varying(100));
