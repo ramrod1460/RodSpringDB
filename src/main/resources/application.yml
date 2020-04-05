@@ -1,7 +1,11 @@
-app:
+spring:
   datasource:
-    jdbc-url: jdbc:postgresql://localhost:5432/demodb
+    url: jdbc:postgresql://localhost:5432/demodb
     username: postgres
     password: apr14600
-    pool-size: 30
-
+    hikari:
+      maximumPoolSize: 5
+      connectionTimeout: 30000
+      idleTimeout: 600000
+      maxLifetime: 1800000
+      connectionTestQuery: SELECT 1
